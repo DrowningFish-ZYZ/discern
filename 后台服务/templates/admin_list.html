@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        {#  操作列表  #}
+        <div style="margin-bottom: 10px">
+            <a class="btn btn-success" href="{% url 'admin_add' %}">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                新建管理员
+            </a>
+
+            <a class="btn btn-info" href="#">
+                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                数据导出
+            </a>
+        </div>
+
+        {# 数据列表 #}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                识别详情列表
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>username</th>
+                    <th>password</th>
+                    <th>email</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in queryset %}
+                    <tr>
+                        <th>{{ item.id }}</th>
+                        <td>{{ item.username }}</td>
+                        <td>-----</td>
+                        <td>{{ item.email }}</td>
+                        <td>
+                            <a class="btn btn-primary btn-xs" href="{% url 'admin_update' item.id %}">编辑</a>
+                            <a class="btn btn-danger btn-xs" href="{% url 'admin_delete' item.id %}">删除</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        {{ pagination }}
+    </div>
+{% endblock %}

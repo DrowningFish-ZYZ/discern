@@ -1,0 +1,68 @@
+/* 基础样式, 用于页面初始化 */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #353b48;
+}
+
+/* 输入框样式 */
+.login-box{
+    width: 320px;
+    border-radius: 5px;
+    padding: 50px;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+.input-box input{
+    height: 40px;
+    border-radius: 3px;
+    text-indent: 15px;
+    border: none;
+    margin-bottom: 15px;
+}
+.input-box button{
+    /* border: none; */
+    border: 4px solid;
+    height: 45px;
+    background: none;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+.input-box button::before,
+.input-box button::after{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 5px;
+    background-color: #353b48;
+    transform: skewX(30deg);  /* 向x轴倾斜 */
+    transition: 0.4s linear;  /* 动画过渡 */
+}
+
+.input-box button::before{
+    top: -4px;
+    left: 10%;
+}
+.input-box button::after{
+    bottom: -4px;
+    right: 10%;
+}
+.input-box button:hover::before{
+    left: 80%;
+}
+.input-box button:hover::after{
+    right: 80%;
+}
+.input-box button:hover{
+    color: #1E9FFF;
+}

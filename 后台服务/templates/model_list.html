@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        {#  操作列表  #}
+        <div style="margin-bottom: 10px">
+            <a class="btn btn-success" href="{% url 'model_add' %}">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                新建识别类型
+            </a>
+
+            <a class="btn btn-info" href="#">
+                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                数据导出
+            </a>
+        </div>
+
+        {# 数据列表 #}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                模型列表
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>模型名称</th>
+                    <th>内部名称</th>
+                    <th>识别类型</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in queryset %}
+                    <tr>
+                        <th>{{ item.id }}</th>
+                        <td>{{ item.label }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.discernType }}</td>
+                        <td>
+                            <a class="btn btn-primary btn-xs" href="{% url 'model_update' item.id %}">编辑</a>
+                            <a class="btn btn-danger btn-xs" href="{% url 'model_delete' item.id %}">删除</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        {{ pagination }}
+    </div>
+{% endblock %}
