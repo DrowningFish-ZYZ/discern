@@ -24,3 +24,4 @@
 
 ## 2.大体界面
 ### 2.1.前端
+![Image text](https://github.com/DrowningFish-ZYZ/discern/blob/main/showimg/1.jpg)
