@@ -25,3 +25,18 @@
 ## 2.大体界面
 ### 2.1.前端
 ![Image text](https://github.com/DrowningFish-ZYZ/discern/blob/main/showimg/1.jpg)
+---
+![Image text](https://github.com/DrowningFish-ZYZ/discern/blob/main/showimg/2.jpg)
+---
+![Image text](https://github.com/DrowningFish-ZYZ/discern/blob/main/showimg/3.jpg)
+---
+![Image text](https://github.com/DrowningFish-ZYZ/discern/blob/main/showimg/4.jpg)
+---
+![Image text](https://github.com/DrowningFish-ZYZ/discern/blob/main/showimg/5.jpg)
+---
+![Image text](https://github.com/DrowningFish-ZYZ/discern/blob/main/showimg/6.jpg)
+---
+![Image text](https://github.com/DrowningFish-ZYZ/discern/blob/main/showimg/7.jpg)
+
+### 2.2.后端
+![Image text](https://github.com/DrowningFish-ZYZ/discern/blob/main/showimg/8.jpg)
